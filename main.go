@@ -6,6 +6,10 @@ import (
 )
 
 func main () {
-	Ayat := discordgo.New();
+	token := "test" 
+	dg , err := discordgo.New("BOT" + token) 
+	if err != nil {
+		fmt.Println("err : %v", err);
+	}
 	fmt.Println("Bot is now running. Press Ctrl+C to exit.");
 }
